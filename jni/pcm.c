@@ -1030,6 +1030,9 @@ struct pcm *pcm_open_req(unsigned int card, unsigned int device,
              flags & PCM_IN ? 'c' : 'p');
 
 
+    fprintf(stderr, "use device '%s'", fn);
+
+
     if ((flags & PCM_IN))
     {
         pcm->capture_channels = config->channels;//config->in_init_channels;
